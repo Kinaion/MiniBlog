@@ -9,7 +9,7 @@
 
 
 
-	<title>Mini-Blog 3 chats</title>
+	<title>Mini-Blog 2 MCs & 1 V</title>
 
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/blogStyle.css">
@@ -26,29 +26,50 @@
 
 	<!-- filters zone -->
 	<aside>
-		<input list="authorList" name="galaxy" placeholder="your name">
-			<datalist id="authorList">
-				<option value="Berlioz">
-				<option value="Marie">
-				<option value="Toulouse">
-			</datalist>
+		<datalist id="authorList">
+			<option value="Berlioz">
+			<option value="Marie">
+			<option value="Toulouse">
+		</datalist>
+		
+		<input list="authorList" name="author" placeholder="your name">
 
-		<label>Peinture</label><input type="checkbox" name="cat" value="Peinture">
-		<label>Musique</label><input type="checkbox" name="cat" value="Musique">
+		<label>Cuisine</label><input type="radio" name="cat" value="Cuisine">
+		<label>Garage</label><input type="radio" name="cat" value="Garage">
+		<label>Décoration</label><input type="radio" name="cat" value="Décoration">
+		<label>Chat</label><input type="radio" name="cat" value="Chat">
 
 					
 	</aside>
 	
-	<!-- display list articles -->
 	<main>
 		<!-- add an article -->
 		<section>
 
 		</section>
+		
+		<!-- display list articles -->
+		<section>
+			<article> 
+				<div>Titre</div>
+				<div>Author</div>
+				<div>Date</div>
+				<div>Category</div>
+			</article>
+			<article> 
+				<div>Titre</div>
+				<div>Author</div>
+				<div>Date</div>
+				<div>Category</div>
+			</article>
+
+		</section>
 	</main>
 
 	<!-- footer -->
-	<footer></footer>
+	<footer>
+		lien github projet...
+	</footer>
 
 </body>
 </html>
