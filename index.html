@@ -21,51 +21,101 @@
 <body>
 	<!-- header -->
 	<header>
-	Mini blog
+	<h1>Mini blog</h1>
 	</header>
 
 	<!-- filters zone -->
-	<aside>
-		<datalist id="authorList">
-			<option value="Berlioz">
-			<option value="Marie">
-			<option value="Toulouse">
-		</datalist>
+	<div class="wrapper">
+		<aside>
+			<datalist id="authorList">
+				<option value="Berlioz"></option>
+				<option value="Marie"></option>
+				<option value="Toulouse"></option>
+			</datalist>
+			
+			<label>Auteur : </label>
+			<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
+
+			<label>Cuisine<input type="radio" name="cat" value="Cuisine"></label>
+			<label>Garage<input type="radio" name="cat" value="Garage"></label>
+			<label>Décoration<input type="radio" name="cat" value="Décoration"></label>
+			<label>Chat<input type="radio" name="cat" value="Chat"></label>
+
+						
+		</aside>
 		
-		<input list="authorList" name="author" placeholder="your name">
+		<main>
+			<!-- add an article -->
+			<section>
 
-		<label>Cuisine</label><input type="radio" name="cat" value="Cuisine">
-		<label>Garage</label><input type="radio" name="cat" value="Garage">
-		<label>Décoration</label><input type="radio" name="cat" value="Décoration">
-		<label>Chat</label><input type="radio" name="cat" value="Chat">
+			</section>
+			
+			<!-- display list articles -->
+			<section>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
+				<article> 
+					<div>Titre</div>
+					<div>Author</div>
+					<div>Date</div>
+					<div>Category</div>
+				</article>
 
-					
-	</aside>
-	
-	<main>
-		<!-- add an article -->
-		<section>
-
-		</section>
-		
-		<!-- display list articles -->
-		<section>
-			<article> 
-				<div>Titre</div>
-				<div>Author</div>
-				<div>Date</div>
-				<div>Category</div>
-			</article>
-			<article> 
-				<div>Titre</div>
-				<div>Author</div>
-				<div>Date</div>
-				<div>Category</div>
-			</article>
-
-		</section>
-	</main>
-
+			</section>
+		</main>
+	</div>
 	<!-- footer -->
 	<footer>
 		lien github projet...
