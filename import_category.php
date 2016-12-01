@@ -16,11 +16,9 @@ $result = $sth->fetchAll();
 
 foreach ($result as $value)
 	{
-
 		$tpld = str_replace("{{nomCategory}}", $value[0], $templateCategory);
       	
       	echo $tpld;
 	}
-
 
 ?>

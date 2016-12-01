@@ -6,7 +6,15 @@ include '.init.php';
 $formName = $_REQUEST['form_author'];
 $formTitle = $_REQUEST['form_title'];
 $formContent = $_REQUEST['form_content'];
-$formCategory = $_REQUEST['form_category'];
+
+if (isset($_REQUEST['form_category']))
+    {
+        $formCategory = $_REQUEST['form_category'];
+    }
+else
+    {
+        $formCategory = 'UNDEFINED';
+    }
 
 
 //TABLES TO FILL WITH DATA
@@ -16,9 +24,15 @@ $tableCategory = "BLOG_CATEGORY";
 
 
 //NAME REQUEST
-$sth = $conn->prepare('INSERT INTO `'.$tableAuthor.'` (Name) VALUES (:Name)');
-$sth -> bindParam(':Name', $formName);
-$sth -> execute();
+try
+    {
+        $sth = $conn->prepare('INSERT INTO `'.$tableAuthor.'` (Name) VALUES (:Name)');
+        $sth -> bindParam(':Name', $formName);
+        $sth -> execute();
+    }
+catch(Exception $e) {
+  echo 'Message: ' .$e->getMessage();
+}
 
 
 //AUTHOR_ID REQUEST - IN ORDER TO LINK BLOG_ARTICLE AND BLOG_AUTHOR TABLES
