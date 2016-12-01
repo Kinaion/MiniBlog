@@ -32,15 +32,15 @@
 			<form name="add_article" action="blog_form.php" method="get">
 				
 					<label for="form_author">Auteur : </label>
-					<input type="text" name="form_author">
+					<input type="text" name="form_author" required>
 
 					<?php include 'import_category.php' ?> <!-- calling categories and adding them to the HTML page -->
 
 					<label for="form_title">Titre : </label>
-					<input type="text" name="form_title">
+					<input type="text" name="form_title" required>
 
 					<label for="form_content">Article : </label>
-					<textarea name="form_content" placeholder="votre article..."></textarea>
+					<textarea name="form_content" placeholder="votre article..." required></textarea>
 				
 					<input type="submit" value="Submit">
 

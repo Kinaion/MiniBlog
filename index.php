@@ -42,7 +42,7 @@
 			<label>Chat<input type="radio" name="cat" value="Chat"></label>
  -->
 			<?php include('import_category.php'); ?>
-				
+
 		</aside>
 		
 		<main>
@@ -53,7 +53,8 @@
 			
 			<!-- display list articles -->
 			<section>
-				<article data-id-article="1"> 
+				<?php include 'PHPaffiche.php'; ?>
+				<!-- <article data-id-article="1"> 
 					<div>Titre</div>
 					<div>Author</div>
 					<div>Date</div>
@@ -112,7 +113,7 @@
 					<div>Author</div>
 					<div>Date</div>
 					<div>Category</div>
-				</article>
+				</article> -->
 
 			</section>
 		</main>
