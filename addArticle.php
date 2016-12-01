@@ -34,12 +34,8 @@
 					<label for="form_author">Auteur : </label>
 					<input type="text" name="form_author">
 
-					<label>Cuisine<input type="radio" name="form_category" value="Cuisine"></label>
-					<label>Garage<input type="radio" name="form_category" value="Garage"></label>
-					<label>Décoration<input type="radio" name="form_category" value="Décoration"></label>
-					<label>Chat<input type="radio" name="form_category" value="Chat"></label>	
-				
-			
+					<?php include 'import_category.php' ?> <!-- calling categories and adding them to the HTML page -->
+
 					<label for="form_title">Titre : </label>
 					<input type="text" name="form_title">
 
