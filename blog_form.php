@@ -10,19 +10,41 @@ $tableCategory = "BLOG_CATEGORY";
 
 //DATA TO GATHER FROM FORM
 $formName = $_REQUEST['form_author'];
-$formAddCategory = $_REQUEST['form_addcategory'];
 $formTitle = $_REQUEST['form_title'];
 $formContent = $_REQUEST['form_content'];
 
 
-//IF THE CATEGORY RADIO IS NOT SET, THEN IT WILL BE 'UNDEFINED'
-if (isset($_REQUEST['form_category'])) 
+//CATEGORY SECTION
+//IF USER DON'T ADD A NEW CATEGORY THEN IT WILL BE THE RADIO BUTTON SELECTED AS CATEGORY FOR THE ARTICLE
+if(empty($_REQUEST['form_addcategory']))
     {
-        $formCategory = $_REQUEST['form_category'];
+        if (isset($_REQUEST['form_category'])) 
+            {
+                $formCategory = $_REQUEST['form_category'];
+            }
+
+        else
+            {
+                $formCategory = 'UNDEFINED';
+            }
+        
     }
+//OTHERWISE THE NEW CATEGORY IS ADDED AND SELECTED AS CATEGORY FOR THE ARTICLE
 else
     {
-        $formCategory = 'UNDEFINED';
+        $formCategory = $_REQUEST['form_addcategory'];
+
+        try
+            {
+                $sth = $conn->prepare('INSERT INTO `'.$tableCategory.'` (Category) VALUES (:Category)');
+                $sth -> bindParam(':Category', $formCategory);
+                $sth -> execute();
+            }
+        catch(Exception $e) 
+            {
+                /*echo 'Message: ' .$e->getMessage();*/
+            }
+        
     }
 
 
@@ -54,12 +76,14 @@ $idCategory = $sth->fetchAll();
 
 
 //TITLE & CONTENT & CATEGORY REQUEST
-$sth = $conn->prepare('INSERT INTO `'.$tableArticle.'` (Title, Content, Author_ID, Category_ID) VALUES (:Title, :Content, :AuthorID, :CategoryID)');
+$sth = $conn->prepare('INSERT INTO `'.$tableArticle.'` (Title, Content, Author_ID, Category_ID, Date) VALUES (:Title, :Content, :AuthorID, :CategoryID, NOW())');
 $sth -> bindParam(':CategoryID', $idCategory[0]['Category_ID']);
 $sth -> bindParam(':AuthorID', $idAuthor[0]['Author_ID']);
 $sth -> bindParam(':Title', $formTitle);
 $sth -> bindParam(':Content', $formContent);
 $sth -> execute();
 
+header('Location: index.php');
+exit;
 
 ?>
