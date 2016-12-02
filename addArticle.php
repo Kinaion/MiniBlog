@@ -46,6 +46,7 @@
 					<textarea name="form_content" placeholder="votre article..." required></textarea>
 				
 					<input type="submit" value="Submit">
+					<a href="index.php"><input type="button" value="Retour"></a>
 
 			</form>
 		</main>
@@ -54,6 +55,10 @@
 	<footer>
 		lien github projet...
 	</footer>
+
+	<script>
+
+	</script>
 
 </body>
 </html>
