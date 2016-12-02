@@ -10,12 +10,20 @@
 
 
 	<title>Mini-Blog 2 MCs & 1 V</title>
+	
+	<!--Import Google Icon Font-->
+	<!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+	<!-- import materialize -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
 
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/blogStyle.css">
-
-	<!-- js -->
-
 
 </head>
 <body>
@@ -36,11 +44,7 @@
 			<label>Auteur : </label>
 			<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
 
-<!-- 			<label>Cuisine<input type="radio" name="cat" value="Cuisine"></label>
-			<label>Garage<input type="radio" name="cat" value="Garage"></label>
-			<label>Décoration<input type="radio" name="cat" value="Décoration"></label>
-			<label>Chat<input type="radio" name="cat" value="Chat"></label>
- -->
+
 			<?php include('import_category.php'); ?>
 
 			<input type="submit" value="fresh, so fresh!!">
@@ -51,13 +55,24 @@
 			<!-- add an article -->
 			<section>
 
-				<input type="submit" value="hello les romanos" href="addArticle.php">
+				<a href="addArticle.php">Ajouter un article</a>
 
 			</section>
 			
-			<!-- display list articles -->
 			<section>
+				<article> 
+					<div>Titre</div>
+					<div>Auteur</div>
+					<div>Date</div>
+					<div>Categorie</div>
+				</article>
+				
+				<!-- display list articles -->
 				<?php include 'PHPaffiche.php'; ?>
+
+		
+		<!-- zone test article ******************************************** -->
+
 				
 			</section>
 		</main>
