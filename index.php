@@ -6,11 +6,14 @@
 
 	<meta name="description" content="description de la page">
 
-	<title>Mini-Blog 2 MCs & 1 V</title>
+	<title>Mini-Blog - liste des articles</title>
 	
-	<!--Import Google Icon Font-->
-	<!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<link rel="shortcut icon" type="image/x-icon" href="css/img/favicon.ico" />	
 
+
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<!-- import materialize -->
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
@@ -33,59 +36,57 @@
 	</script>    
 
 </head>
-<body>
+<body class="container-fluid">
 	<!-- header -->
-	<header>
-		<h1>Mini blog</h1>
+	<header class="grey darken-4">
+		<h1><i class="medium material-icons">pets</i> Mini blog </h1>
 	</header>
 
 	<!-- filters zone -->
-	<div class="wrapper">
-		<aside>
+	<main class="row">
+		<aside class="col s12 m3">
 
-			<form action="index.php" method="get">
+			<form action="index.php" method="post">
 				
-				<label>Auteur : </label>
-				<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
+				<p>
+					<label for="author">Auteur : </label>
+					<input class="filterAuthor" list="authorList" name="author" placeholder="Auteur">
+
 					<datalist id="authorList">
 						<?php include('import_author.php'); ?>
 					</datalist> 
-
+					</p>
+					<p>
 				<?php include('import_category.php'); ?>
-
-				<input type="submit" value="fresh, so fresh!!">
+				</p>
+				<input class="btn" type="submit" value="Filtrer">
 			</form>
+			
+			<hr />
+			<!-- add an article -->
+
+			<p>
+			<!-- 	<label> Ajouter un article : </label> -->
+				<a class="btn" href="addArticle.php">Ajouter article </a><!-- <i class="tiny material-icons">add</i> -->
+			</p>
+
 
 		</aside>
 		
-		<main>
-			<!-- add an article -->
-			<section>
-
-				<a href="addArticle.php">Ajouter un article</a>
-
-			</section>
+		<div class="col s12 m9">
 			
-			<section>
-				<article> 
-					<div>Titre</div>
-					<div>Auteur</div>
-					<div>Date</div>
-					<div>Categorie</div>
-				</article>
-				
+			<section class="container-fluid">
+	
 				<!-- display list articles -->
 				<?php include 'PHPaffiche.php'; ?>
-					<!-- zone test modal ******************************************** -->
-			
-          
+					          
 				
 			</section>
-		</main>
-	</div>
+		</div>
+	</main>
 	<!-- footer -->
-	<footer>
-		lien github projet...
+	<footer class="footer grey darken-4">
+		<a class="rigth" href=" https://github.com/Kinaion/MiniBlog"> mini-blog on Github</a>
 	</footer>
 
 </body>

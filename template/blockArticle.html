@@ -1,6 +1,29 @@
-<article data-id-article="{{id_article}}"> 
-	<div>{{Titre}}</div>
-	<div>{{Author}}</div>
-	<div>{{Date}}</div>
-	<div>{{Category}}</div>
+
+
+
+
+
+
+
+<article class="row"> 
+	<!--Modal Trigger-->
+	
+	<div class="col s12 m5 ">{{Titre}}</div>
+	<div class="col s3 m2">{{Author}}</div>
+	<div class="col s3 m2">{{Date}}</div>
+	<div class="col s3 m2">{{Category}}</div>
+	<!--bouton modal-->
+	<a class="waves-effect waves-light btn col s1 m1" href="#modal{{id_article}}"> <i class="material-icons">play_arrow</i></a>
 </article>
+
+<!-- modal -->
+<div id="modal{{id_article}}" class="modal"> 
+<div class="modal-header">
+  <a href="#!" class=" right modal-action modal-close waves-effect waves-green btn"><i class="material-icons">clear</i></a>
+</div>
+    <div class="modal-content flow-text">
+      <h4>{{Titre}}</h4>
+      <p class="info">{{Author}} - {{Date}}</p>
+      <p>{{Content}}</p>
+    </div>
+  </div>

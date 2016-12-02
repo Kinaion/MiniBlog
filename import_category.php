@@ -10,11 +10,13 @@ $tableCategory = "BLOG_CATEGORY";
 $sth = $conn->prepare('SELECT Category FROM `'.$tableCategory.'`');
 $sth->execute();
 $result = $sth->fetchAll();
-
+$i=0;
 foreach ($result as $value)
 	{
 		$templateCategory = file_get_contents("template/blockCategory.html");
 		$tpld = str_replace("{{nomCategory}}", $value[0], $templateCategory);
+      	$tpld = str_replace("{{i}}", $i, $tpld);
+      	$i++;
       	echo $tpld;
 	}
 

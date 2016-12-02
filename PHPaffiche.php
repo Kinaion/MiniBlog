@@ -2,8 +2,8 @@
 
 include'.init.php';
 
-/* request without filters */
-$requete = 'SELECT BLOG_ARTICLE.Title, BLOG_ARTICLE.Content, BLOG_ARTICLE.Date, BLOG_AUTHOR.Name, BLOG_CATEGORY.Category, BLOG_ARTICLE.Article_ID
+/* request without filters BLOG_ARTICLE.Title, BLOG_ARTICLE.Content, BLOG_ARTICLE.Date, BLOG_AUTHOR.Name, BLOG_CATEGORY.Category, BLOG_ARTICLE.Article_ID*/
+$requete = 'SELECT *
 FROM BLOG_ARTICLE
 NATURAL JOIN BLOG_CATEGORY
 NATURAL JOIN BLOG_AUTHOR';
@@ -53,7 +53,8 @@ for ($i=0; $i< count($result); $i++)
 		$tpl = str_replace("{{Titre}}", $result[$i]['Title'],$tpl);
     	$tpl = str_replace("{{Author}}", $result[$i]['Name'],$tpl);
     	$tpl = str_replace("{{Date}}", $result[$i]['Date'],$tpl);
-    	$tpl = str_replace("{{Category}}", $result[$i]['Category'],$tpl);
+        $tpl = str_replace("{{Category}}", $result[$i]['Category'],$tpl);
+    	$tpl = str_replace("{{Content}}", $result[$i]['Content'],$tpl);
     	
 
     	echo $tpl;
