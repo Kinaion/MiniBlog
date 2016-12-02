@@ -35,19 +35,19 @@
 	<!-- filters zone -->
 	<div class="wrapper">
 		<aside>
-			<datalist id="authorList">
-				<option value="Berlioz"></option>
-				<option value="Marie"></option>
-				<option value="Toulouse"></option>
-			</datalist>
-			
-			<label>Auteur : </label>
-			<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
 
+			<form action="index.php" method="get">
+				<datalist id="authorList">
+					<?php include('import_author.php'); ?>
+				</datalist> 
+				
+				<label>Auteur : </label>
+				<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
 
-			<?php include('import_category.php'); ?>
+				<?php include('import_category.php'); ?>
 
-			<input type="submit" value="fresh, so fresh!!">
+				<input type="submit" value="fresh, so fresh!!">
+			</form>
 
 		</aside>
 		
