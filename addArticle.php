@@ -35,6 +35,9 @@
 					<input type="text" name="form_author" required>
 
 					<?php include 'import_category.php' ?> <!-- calling categories and adding them to the HTML page -->
+					
+					<label for="form_addcategory">Ajouter une catégorie : </label>
+					<input type="text" name="form_addcategory">
 
 					<label for="form_title">Titre : </label>
 					<input type="text" name="form_title" required>

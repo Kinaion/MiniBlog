@@ -43,78 +43,22 @@
  -->
 			<?php include('import_category.php'); ?>
 
+			<input type="submit" value="fresh, so fresh!!">
+
 		</aside>
 		
 		<main>
 			<!-- add an article -->
 			<section>
 
+				<input type="submit" value="hello les romanos" href="addArticle.php">
+
 			</section>
 			
 			<!-- display list articles -->
 			<section>
 				<?php include 'PHPaffiche.php'; ?>
-				<!-- <article data-id-article="1"> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article data-id-article="2"> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article>
-				<article> 
-					<div>Titre</div>
-					<div>Author</div>
-					<div>Date</div>
-					<div>Category</div>
-				</article> -->
-
+				
 			</section>
 		</main>
 	</div>

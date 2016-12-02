@@ -1,6 +1,7 @@
 <?php
 include '.init.php';
 
+
 //TABLES TO FILL WITH DATA
 $tableCategory = "BLOG_CATEGORY";
 
@@ -12,9 +13,10 @@ $result = $sth->fetchAll();
 
 foreach ($result as $value)
 	{
-		$templateCategory = file_get_contents("blockcategory.html");
+		$templateCategory = file_get_contents("template/blockCategory.html");
 		$tpld = str_replace("{{nomCategory}}", $value[0], $templateCategory);
       	echo $tpld;
 	}
+
 
 ?>
