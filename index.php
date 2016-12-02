@@ -6,9 +6,6 @@
 
 	<meta name="description" content="description de la page">
 
-
-
-
 	<title>Mini-Blog 2 MCs & 1 V</title>
 	
 	<!--Import Google Icon Font-->
@@ -18,6 +15,9 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
@@ -25,11 +25,18 @@
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/blogStyle.css">
 
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	    $('.modal').modal();
+	  });
+	</script>    
+
 </head>
 <body>
 	<!-- header -->
 	<header>
-	<h1>Mini blog</h1>
+		<h1>Mini blog</h1>
 	</header>
 
 	<!-- filters zone -->
@@ -37,12 +44,12 @@
 		<aside>
 
 			<form action="index.php" method="get">
-				<datalist id="authorList">
-					<?php include('import_author.php'); ?>
-				</datalist> 
 				
 				<label>Auteur : </label>
 				<input class="filterAuthor" list="authorList" name="author" placeholder="your name">
+					<datalist id="authorList">
+						<?php include('import_author.php'); ?>
+					</datalist> 
 
 				<?php include('import_category.php'); ?>
 
@@ -69,10 +76,9 @@
 				
 				<!-- display list articles -->
 				<?php include 'PHPaffiche.php'; ?>
-
-		
-		<!-- zone test article ******************************************** -->
-
+					<!-- zone test modal ******************************************** -->
+			
+          
 				
 			</section>
 		</main>

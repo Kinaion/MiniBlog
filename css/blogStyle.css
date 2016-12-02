@@ -1,9 +1,3 @@
-/*html, body, header, footer, aside, main{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-*/
 /*
 *************************COLORS SCHEME 1*****************************
 
@@ -34,51 +28,28 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	background-color: #fdfffc;
-	font-family: 'open-sans', verdana;
 }
 
 .wrapper{
 	flex: 1 1 auto; /*occuper la hauteur restante*/
 	display: flex;
-	margin: 0 10%;
-}
-header{
-	background-color: #011627;
-	width: 100%;
-	height: 5em;
-	color: #fdfffc;
-	padding: 0 0.5em;
 }
 
-footer{
-	background-color: #011627;
-	width: 100%;
-	height: 2em;
-	color: #fdfffc;
-}
 
 aside{
 	width: 25%;
-	background-color: #ffffff;
 }
 
 main{
 	flex: 1 0 auto;
-	background-color: #ffffff;
 }
 
 article{
-	padding: 0.75em;
-	border-bottom: 2px solid #2ec4b6;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-article:last-child{
-	border: none;
-}
 
 article div{
 	width: 10%;
@@ -87,19 +58,3 @@ article div{
 article div:first-child{
 	width: 60%;
 }
-
-/*label, .filterAuthor{
-	padding: 0.5em ;
-	margin: 0.5em 0;
-	display: block;
-	border:none;
-
-	width: 100%;
-}
-.filterAuthor{
-	border-bottom: 2px solid #2ec4b6;
-}
-input:selected{
-	border:none;
-
-}*/

@@ -32,7 +32,10 @@
 			<form name="add_article" action="blog_form.php" method="get">
 				
 					<label for="form_author">Auteur : </label>
-					<input type="text" name="form_author" required>
+					<input type="text" list='form_author' name="form_author" required>
+						<datalist id="form_author">
+							<?php include('import_author.php'); ?>
+						</datalist> 
 
 					<?php include 'import_category.php' ?> <!-- calling categories and adding them to the HTML page -->
 					
@@ -46,6 +49,7 @@
 					<textarea name="form_content" placeholder="votre article..." required></textarea>
 				
 					<input type="submit" value="Submit">
+					<a href="index.php"><input type="button" value="Retour"></a>
 
 			</form>
 		</main>
@@ -54,6 +58,10 @@
 	<footer>
 		lien github projet...
 	</footer>
+
+	<script>
+
+	</script>
 
 </body>
 </html>

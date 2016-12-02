@@ -7,7 +7,7 @@ $tableAuthor = "BLOG_AUTHOR";
 
 
 //GATHERING DATA FROM BLOG_CATEGORY TABLE IN ORDER TO SHOW THE CATEGORIES INTO OUR HTML PAGE
-$sth = $conn->prepare('SELECT Category FROM `'.$tableAuthor.'`');
+$sth = $conn->prepare('SELECT Name FROM `'.$tableAuthor.'`');
 $sth->execute();
 $result = $sth->fetchAll();
 
